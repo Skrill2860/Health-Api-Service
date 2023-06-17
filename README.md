@@ -5,7 +5,7 @@
 $ dotnet run {path_to_project}\Health.Service.csproj
 ```
 
-Для запуска БД в Docker используи?те команду из папки с проектом (src\Service):
+Для запуска БД в Docker используйте команду из папки с проектом (src\Service):
 ```sh
 $ docker compose up
 ```
