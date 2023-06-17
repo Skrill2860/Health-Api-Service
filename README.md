@@ -9,3 +9,5 @@ $ dotnet run {path_to_project}\Health.Service.csproj
 ```sh
 $ docker compose up
 ```
+
+Для тестирования есть Swagger, его можно открыть стандартно через http://localhost:5000/swagger или https://localhost:5001/swagger
