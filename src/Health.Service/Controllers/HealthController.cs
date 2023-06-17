@@ -37,6 +37,7 @@ namespace Health.Service.Controllers
                 totalActivitiesDuration += activity.Duration;
                 totalCaloriesBurnt += activity.Calories;
             }
+
             decimal averageActivitiesDuration = totalActivitiesDuration / activities.Count;
             decimal averageCaloriesLost = totalCaloriesBurnt / activities.Count;
 
@@ -71,7 +72,7 @@ namespace Health.Service.Controllers
             };
             await _activityRepository.CreateAsync(activity);
 
-            return CreatedAtAction("Activity record created", new { id = activity.Id }, activity.AsDto());
+            return CreatedAtAction("Activity record created", new {id = activity.Id}, activity.AsDto());
         }
 
         [HttpPost("nutrition")]
@@ -86,7 +87,7 @@ namespace Health.Service.Controllers
             };
             await _nutritionRepository.CreateAsync(nutrition);
 
-            return CreatedAtAction("Nutrition record created", new { id = nutrition.Id }, nutrition.AsDto());
+            return CreatedAtAction("Nutrition record created", new {id = nutrition.Id}, nutrition.AsDto());
         }
 
         [HttpPost("sleep")]
@@ -99,7 +100,7 @@ namespace Health.Service.Controllers
             };
             await _sleepRepository.CreateAsync(sleep);
 
-            return CreatedAtAction("Sleep record created", new { id = sleep.Id }, sleep.AsDto());
+            return CreatedAtAction("Sleep record created", new {id = sleep.Id}, sleep.AsDto());
         }
     }
 }
